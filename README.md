@@ -44,7 +44,7 @@ df.isna().sum()
 
 Since `True` is equivalent to `1` and `False` is equivalent to `0` in Python, taking the `.sum()` of the DataFrame (or Series) will return the total number of `NaN` values in the dataset.  Pandas even breaks this down by column -- see the example output below.
 
-#Number of NaNs the in Titanic dataset by column
+#Number of NaNs in the Titanic dataset by column
 
 PassengerId      0
 Survived         0
@@ -123,7 +123,7 @@ The two main strategies for dealing with missing values are to drop columns or t
 
 #### Dropping columns
 
-Consider the output from the titanic dataset shown previously.  The `Cabins` column contains 687 missing values. The entire dataset only contains around 900 rows of data.  In this case, it makes more sense to just remove the `Cabins`  column from the dataset entirely.  
+Consider the output from the Titanic dataset shown previously.  The `Cabins` column contains 687 missing values. The entire dataset only contains around 900 rows of data.  In this case, it makes more sense to just remove the `Cabins`  column from the dataset entirely.  
 
 Note that while this makes sense for the `Cabins` column, this is not a good idea for dealing with the null values contained within the `Age` column. Although the `Age` column contains 75 missing values, the vast majority of the items in this dataset contain perfectly good information for the age column.  If we dropped this column, we would be throwing out all that information just to deal with a small subset of missing values in that column!
 
